@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form to Table</title>
+  <style>
+    body {
+      background-color: #121212;   
+      color: #E0E0E0;
+      font-family: 'Open Sans', sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    table {
+      margin: 20px auto;
+      border-collapse: collapse;
+      width: 60%;
+      background-color: #1E1E1E;
+      box-shadow: 0 0 10px rgba(0,255,255,0.3);
+    }
+    th, td {
+      border: 1px solid #00FFFF;
+      padding: 10px;
+      text-align: center;
+    }
+    th {
+      background-color: #00FFFF;
+      color: #121212;
+    }
+    tr:hover {
+      background-color: rgba(255,0,255,0.2);
+    }
+  </style>
+</head>
+<body>
+  <h2>Student Information Form</h2>
+  <form onsubmit="return false;">
+    <label>Name: </label>
+    <input type="text" id="name"><br><br>
+
+    <label>Date of Birth: </label>
+    <input type="date" id="dob"><br><br>
+
+    <label>Branch: </label>
+    <input type="text" id="branch"><br><br>
+
+    <label>Skills (comma separated): </label>
+    <input type="text" id="skills"><br><br>
+
+    <input type="button" value="Add" onclick="addData()">
+  </form>
+
+  <h3>Output:</h3>
+  <div id="op"></div>
+
+<script>
+function addData() {
+ 
+  const name = document.getElementById("name").value;
+  const dob = document.getElementById("dob").value;
+  const branch = document.getElementById("branch").value;
+  const skills = document.getElementById("skills").value.split(",").map(s => s.trim());
+
+  // Build table
+  let table = `
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Date of Birth</th>
+        <th>Branch</th>
+        <th>Skills</th>
+      </tr>
+      <tr>
+        <td>${name}</td>
+        <td>${dob}</td>
+        <td>${branch}</td>
+        <td>${skills.join(", ")}</td>
+      </tr>
+    </table>
+  `;
+
+  document.getElementById("op").innerHTML = table;
+}
+</script>
+</body>
+</html>

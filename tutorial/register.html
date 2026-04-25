@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Form</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #141e30, #243b55);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background: #1e1e2f;
+      padding: 30px;
+      border-radius: 10px;
+      width: 320px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #00f7ff;
+    }
+
+    .input-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #ccc;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      border: none;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    .radio-group {
+      display: flex;
+      gap: 15px;
+      color: #ccc;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background: #00f7ff;
+      color: black;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #00cfd6;
+    }
+
+    .login-text {
+      text-align: center;
+      margin-top: 10px;
+      color: #aaa;
+    }
+
+    .login-text a {
+      color: #00f7ff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+  <form>
+    <h2>Register</h2>
+
+    <div class="input-group">
+      <label>Full Name</label>
+      <input type="text" placeholder="Enter your name" required>
+    </div>
+
+    <div class="input-group">
+      <label>Email</label>
+      <input type="email" placeholder="Enter your email" required>
+    </div>
+
+    <div class="input-group">
+      <label>Password</label>
+      <input type="password" placeholder="Enter password" required>
+    </div>
+
+    <div class="input-group">
+      <label>Confirm Password</label>
+      <input type="password" placeholder="Confirm password" required>
+    </div>
+
+    <div class="input-group">
+      <label>Gender</label>
+      <div class="radio-group">
+        <label><input type="radio" name="gender"> Male</label>
+        <label><input type="radio" name="gender"> Female</label>
+      </div>
+    </div>
+
+    <button type="submit">Register</button>
+
+    <p class="login-text">
+      Already have an account? <a href="#">Login</a>
+    </p>
+
+  </form>
+</div>
+
+</body>
+</html>

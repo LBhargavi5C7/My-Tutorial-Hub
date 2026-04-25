@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Preschool Advertisement</title>
+<style> .video-wrapper {
+  max-width: 900px;
+  padding: 15px;
+  background: linear-gradient(135deg, #fff8dc, #ffeeba);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.video-wrapper:hover {
+  transform: scale(1.02);
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+}</style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-warning">
+  <div class="container">
+    <img src="./Img/LOGO.jpg.jpeg" 
+    alt="Sri Tejaswini Preschool logo showing three stylized children rising from an open book beneath a glowing sun with the text Shine Bright like a Star and Sri Tejaswini Pre School" 
+    class="navbar-brand img-fluid rounded-circle p-1" style="width: 120px; height: 120px; object-fit: cover;">
+
+    <a class="navbar-brand fw-bold" href="#"><h1><i><b>Sri Tejaswini Preschool</b></i></h1></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#programs">Programs</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="#admissions">Admissions</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container py-5 text-center">
+  <div class="video-wrapper mx-auto">
+    <video autoplay muted loop>
+      <source src="./Img/sch.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <a href="https://www.youtube.com/@sritejaswinipreschool" 
+     target="_blank" 
+     class="btn btn-danger mt-4 px-4 py-2 fw-bold shadow-sm">
+     🎥 Visit Our YouTube Channel
+  </a>
+</div><section class="bg-light text-center py-5">
+  <div class="container">
+    <h1 class="fw-bold text-primary">Admissions Open!</h1>
+    <p class="lead">Where learning meets fun — enroll your child today.</p>
+    <a href="#admissions" class="btn btn-warning btn-lg">Apply Now</a>
+  </div>
+</section>
+
+<section id="programs" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Our Programs</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img src="./Img/play.jpg" class="card-img-top" alt="Playgroup">
+          <div class="card-body">
+            <h5 class="card-title">Playgroup</h5>
+            <p class="card-text">Fun activities to spark creativity and social skills.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img src="./Img/Nursery.jpg" class="card-img-top" alt="Nursery">
+          <div class="card-body">
+            <h5 class="card-title">Nursery</h5>
+            <p class="card-text">Early learning with stories, songs, and playful exercises.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img src="./Img/ukg.jpg" class="card-img-top" alt="Kindergarten">
+          <div class="card-body">
+            <h5 class="card-title">Kindergarten</h5>
+            <p class="card-text">Structured learning to prepare kids for primary school.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="gallery" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Gallery</h2>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./Img/classroom.jpeg" class="d-block mx-auto" alt="Classroom" style="width: 300px; height: 300px; object-fit: cover;">
+        Two curved preschool tables, one green and one yellow, arranged like a yin-yang shape in a small classroom with yellow and red child-size chairs around them, educational posters on pale pink walls, and a polished dark green floor, creating a bright, welcoming early learning space
+        </div>
+        <div class="carousel-item">
+          <img src="./Img/games.jpeg" class="d-block mx-auto" alt="Playground" style="width: 300px; height: 300px; object-fit: cover;">
+        </div>
+        <div class="carousel-item">
+          <img src="./Img/play.jpeg" class="d-block mx-auto" alt="Activities" style="width: 300px; height: 300px; object-fit: cover;">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Admissions Section -->
+<section id="admissions" class="py-5">
+  <div class="container text-center">
+    <h2 class="mb-4">Admissions</h2>
+    <p class="lead">Limited seats available! Register your child today.</p>
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#admissionModal">Register Now</button>
+  </div>
+</section>
+
+<!-- Admission Modal -->
+<div class="modal fade" id="admissionModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Admission Form</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label class="form-label">Child's Name</label>
+            <input type="text" class="form-control" placeholder="Enter name">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Age</label>
+            <input type="number" class="form-control" placeholder="Enter age">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Parent's Contact</label>
+            <input type="tel" class="form-control" placeholder="Enter phone number">
+          </div>
+          <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="contact" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Contact Us</h2>
+    <form class="row g-3">
+      <div class="col-md-6">
+        <input type="text" class="form-control" placeholder="Your Name">
+      </div>
+      <div class="col-md-6">
+        <input type="email" class="form-control" placeholder="Your Email">
+      </div>
+      <div class="col-12">
+        <textarea class="form-control" rows="4" placeholder="Message"></textarea>
+      </div>
+      <div class="col-12 text-center">
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </div>
+    </form>
+  </div>
+</section>
+<footer class="bg-warning text-center py-3">
+  <p class="mb-0">© 2026 Happy Kids Preschool. All rights reserved.</p>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

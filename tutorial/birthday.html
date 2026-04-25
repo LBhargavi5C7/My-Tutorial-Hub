@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Birthday Message</title>
+  <style>
+    body {
+      background-color: #121212;   
+      color: #E0E0E0;             
+      font-family: 'Open Sans', sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      color: #00FFFF;              /* Neon cyan */
+      text-shadow: 0 0 8px rgba(0,255,255,0.6);
+    }
+
+    input[type="date"] {
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      background-color: #847e7e;
+      color: #E0E0E0;
+      font-size: 16px;
+      outline: none;
+      box-shadow: 0 0 6px rgba(255,0,255,0.4);
+    }
+
+    button {
+      background-color: #00FFFF;
+      color: #121212;
+      font-weight: 600;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-left: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #FF00FF;
+      color: #fff;
+    }
+
+    #output {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #1E1E1E;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,255,0,0.4);
+      font-size: 18px;
+      color: #00FF00; /* Neon green for results */
+    }
+  </style>
+</head>
+<body>
+  <h1>🎂 Birthday Message</h1>
+  <input type="date" id="dob">
+  <button onclick="showMessage()">Get Message</button>
+  <p id="output"></p>
+
+  <script>
+    let nice = ["Have a wonderful day!", "Stay positive and shine!", "You’re amazing!"];
+    let tease = ["Don’t eat all the cake!", "Getting older, huh?", "Still waiting for wisdom?"];
+    let allMessages = [...nice, ...tease];
+
+    function showMessage() {
+      if (allMessages.length === 0) {
+        document.getElementById("output").innerText = "No more messages left!";
+        return;
+      }
+      let randomIndex = Math.floor(Math.random() * allMessages.length);
+      let message = allMessages[randomIndex];
+      document.getElementById("output").innerText = message;
+      allMessages.splice(randomIndex, 1);
+    }
+  </script>
+</body>
+</html>

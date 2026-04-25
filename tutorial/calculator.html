@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <style>
+    body {
+      background-color: #121212;   /* Dark mode background */
+      color: #E0E0E0;              /* Soft text */
+      font-family: 'Open Sans', sans-serif;
+    }
+    #calc {
+      width: 220px;
+      margin: 40px auto;
+      text-align: center;
+      padding: 20px;
+      border-radius: 8px;
+      background-color: #1E1E1E;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+    }
+    #screen {
+      width: 200px;
+      height: 35px;
+      margin-bottom: 10px;
+      text-align: right;
+      font-size: 18px;
+      border: none;
+      border-radius: 4px;
+      padding: 5px;
+      background-color: #000;
+      color: #0FF; /* Neon cyan text */
+    }
+    button {
+      width: 45px;
+      height: 45px;
+      margin: 3px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      background-color: #00FFFF;
+      color: #121212;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #FF00FF;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+<div id="calc">
+  <input type="text" id="screen" readonly>
+  <div id="btn">
+    <button onclick="addToDisplay('1')">1</button>
+    <button onclick="addToDisplay('2')">2</button>
+    <button onclick="addToDisplay('3')">3</button>
+    <button onclick="addToDisplay('+')">+</button><br>
+
+    <button onclick="addToDisplay('4')">4</button>
+    <button onclick="addToDisplay('5')">5</button>
+    <button onclick="addToDisplay('6')">6</button>
+    <button onclick="addToDisplay('-')">-</button><br>
+
+    <button onclick="addToDisplay('7')">7</button>
+    <button onclick="addToDisplay('8')">8</button>
+    <button onclick="addToDisplay('9')">9</button>
+    <button onclick="addToDisplay('*')">*</button><br>
+
+    <button onclick="addToDisplay('0')">0</button>
+    <button onclick="addToDisplay('%')">%</button>
+    <button onclick="addToDisplay('/')">/</button>
+    <button onclick="calculate()">=</button><br>
+
+    <button onclick="clearDisplay()">C</button>
+  </div>
+</div>
+
+<script>
+function addToDisplay(value) {
+  document.getElementById("screen").value += value;
+}
+
+function clearDisplay() {
+  document.getElementById("screen").value = "";
+}
+
+function calculate() {
+  try {
+    document.getElementById("screen").value = eval(document.getElementById("screen").value);
+  } catch (e) {
+    document.getElementById("screen").value = "Error";
+  }
+}
+</script>
+
+</body>
+</html>

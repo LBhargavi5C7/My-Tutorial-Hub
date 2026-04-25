@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Tutorial Homepage</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap');
+
+    body {
+      background-color: #0f0f0f;
+      color: #E0E0E0;
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Global header */
+    .site-header {
+      background: linear-gradient(90deg, #92fbfb, #f08df0);
+      color: #121212;
+      text-align: center;
+      padding: 40px 20px;
+      box-shadow: 0 0 20px rgba(0,255,255,0.4);
+    }
+
+    .site-header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5em;
+      margin: 0;
+    }
+
+    .site-header p {
+      font-size: 1.2em;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+
+    /* Section headers */
+    header {
+      text-align: center;
+      margin: 40px 0 20px;
+    }
+
+    header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2em;
+      color: #00FFFF;
+      text-shadow: 0 0 10px rgba(0,255,255,0.6);
+      margin-bottom: 5px;
+    }
+
+    header p {
+      font-size: 1.1em;
+      color: #aaa;
+    }
+
+    /* Menu grid */
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto 40px;
+      padding: 0 20px;
+    }
+
+    .btn {
+      display: block;
+      padding: 18px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.05em;
+      background-color: #1E1E1E;
+      color: #00FFFF;
+      border: 2px solid #00FFFF;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 12px rgba(0,255,255,0.3);
+      text-align: center;
+    }
+
+    .btn:hover {
+      background-color: #00FFFF;
+      color: #121212;
+      box-shadow: 0 0 20px rgba(49, 0, 55, 0.6);
+      transform: translateY(-3px);
+    }
+  </style>
+</head>
+<body>
+  <div class="site-header">
+    <h1>✨ My Tutorial Hub ✨</h1>
+    <p>Explore projects in HTML, CSS & JavaScript</p>
+  </div>
+
+  <header>
+    <h2>HTML & CSS Tutorials</h2>
+    <p>Select a project to explore</p>
+  </header>
+  <div class="menu">
+    <a href="./tutorial/register.html" class="btn">📝 Register</a>
+    <a href="./tutorial/school.html" class="btn">🏫 School Website</a>
+  </div>
+
+  <header>
+    <h2>JavaScript Tutorials</h2>
+    <p>Select a project to explore</p>
+  </header>
+  <div class="menu">
+    <a href="./tutorial/sort.html" class="btn">🔤 String Sort</a>
+    <a href="./tutorial/birthday.html" class="btn">🎂 Birthday Message</a>
+    <a href="./tutorial/calculator.html" class="btn">🧮 Calculator</a>
+    <a href="./tutorial/guess.html" class="btn">🎲 Guess Number Game</a>
+    <a href="./tutorial/formfilling.html" class="btn">📋 Form Filling</a>
+    <a href="./tutorial/js.html" class="btn">➕ Sum of Numbers</a>
+  </div>
+</body>
+</html>

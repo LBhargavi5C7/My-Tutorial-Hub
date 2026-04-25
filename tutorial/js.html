@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recursive Sum</title>
+</head>
+<body>
+<div>
+  <form action="">
+    <input type="text" id="ip">
+    <input type="button" value="Start" onclick="test()">
+  </form>
+</div>
+
+<div id="op"></div>
+
+<script>
+function test() { 
+  document.getElementById("op").innerHTML = "";
+  var n = parseInt(document.getElementById("ip").value);
+
+  function sum(num) {
+    if (num <= 0) {
+      return 0;     } 
+else {
+      return num + sum(num - 1);     }
+  }
+
+  var result = sum(n);
+  var table = "<table border='1'><thead><tr><th>n</th><th>Sum</th></tr></thead><tbody>";
+  table += "<tr><td>" + n + "</td><td>" + result + "</td></tr>";
+  table += "</tbody></table>";
+
+  document.getElementById("op").innerHTML = table;
+}
+</script>
+
+</body>
+</html>
+
+
